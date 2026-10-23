@@ -1,0 +1,17 @@
+# Local development and generated files
+.venv/
+node_modules/
+dist/
+dev-dist/
+.vite/
+*.tsbuildinfo
+**/__pycache__/
+*.py[cod]
+
+# Local training datasets and generated reports
+resize plant_leaves dataset(1545)/
+multi_crop_classifier/cassava_dataset/
+multi_crop_classifier/results/
+
+# Local environment files and secrets
+.env*

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "cbb",
+    "label": "cbb",
+    "name": "Cassava Bacterial Blight",
+    "crop": "Cassava",
+    "shortDescription": "A bacterial disease that can damage leaves and stems. It often spreads in wet weather and through infected cuttings.",
+    "symptoms": ["Angular brown leaf spots, sometimes with a yellow edge", "Leaves may wilt or dry", "Dark streaks or sticky ooze may appear on stems"],
+    "whatToDoNow": ["Remove badly affected plants when the field is dry and dispose of them away from the garden.", "Avoid moving cuttings or tools from affected plants to healthy plants.", "Use clean planting material for the next planting."],
+    "prevention": ["Plant healthy cuttings from a trusted source.", "Clean tools between fields.", "Leave enough space for air to move between plants."],
+    "whenToCall": "Ask an extension officer if many plants are wilting, stems have dark streaks, or the problem is spreading quickly."
+  },
+  {
+    "id": "cbsd",
+    "label": "cbsd",
+    "name": "Cassava Brown Streak Disease",
+    "crop": "Cassava",
+    "shortDescription": "A virus disease carried by whiteflies and infected cuttings. It can cause brown marks inside the roots as well as leaf symptoms.",
+    "symptoms": ["Yellow patches along leaf veins", "Brown marks or dry areas inside roots", "Affected plants may look uneven in height"],
+    "whatToDoNow": ["Do not use cuttings from plants that may be affected.", "Check the roots of a few plants if it is safe to do so.", "Ask for advice before removing a large part of the field."],
+    "prevention": ["Use clean, tolerant varieties recommended for your area.", "Check planting material before planting.", "Remove volunteer cassava plants and monitor whiteflies."],
+    "whenToCall": "Contact an extension officer when yellow leaf patches appear or roots show brown, corky marks."
+  },
+  {
+    "id": "cgm",
+    "label": "cgm",
+    "name": "Cassava Green Mottle",
+    "crop": "Cassava",
+    "shortDescription": "A virus disease that can make cassava leaves look mottled or misshapen. Infected planting cuttings can carry it to a new field.",
+    "symptoms": ["Uneven light and dark green patches", "Leaves may become narrow, twisted, or smaller", "Plant growth can be reduced"],
+    "whatToDoNow": ["Mark plants with clear symptoms and check nearby plants.", "Do not take cuttings from plants that look affected.", "Seek local advice before removing plants."],
+    "prevention": ["Plant clean cuttings from a reliable source.", "Keep the field free of volunteer cassava.", "Inspect young plants regularly for leaf changes."],
+    "whenToCall": "Ask an extension officer if mottling is clear on several plants or new growth is becoming distorted."
+  },
+  {
+    "id": "cmd",
+    "label": "cmd",
+    "name": "Cassava Mosaic Disease",
+    "crop": "Cassava",
+    "shortDescription": "A virus disease spread by whiteflies and infected cuttings. It causes pale patches on leaves and can reduce root harvest.",
+    "symptoms": ["Pale yellow and green patches on leaves", "Leaves may curl, twist, or become smaller", "Plants may be shorter than nearby healthy cassava"],
+    "whatToDoNow": ["Do not use cuttings from plants with mosaic symptoms.", "Check the rest of the field, especially young plants.", "Get local advice before removing plants across the field."],
+    "prevention": ["Choose clean planting cuttings and varieties suited to your area.", "Remove volunteer cassava plants.", "Ask an extension officer about locally recommended whitefly and disease management."],
+    "whenToCall": "Call an extension officer if symptoms are widespread or plants are stunted."
+  },
+  {
+    "id": "healthy",
+    "label": "healthy",
+    "name": "Healthy-looking Cassava",
+    "crop": "Cassava",
+    "shortDescription": "The photo looks most like healthy cassava leaves. A photo cannot show every pest, root problem, or early disease.",
+    "symptoms": ["Leaves are mostly even in color and shape", "No clear disease pattern is visible in this photo"],
+    "whatToDoNow": ["Continue checking leaves and plant growth regularly.", "Use clean cuttings and keep the field well managed."],
+    "prevention": ["Plant healthy cuttings suited to your area.", "Check plants often, including the underside of leaves.", "Keep notes if new symptoms appear."],
+    "whenToCall": "Ask an extension officer if the plant later wilts, grows poorly, or develops new spots or yellow patches."
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "cbb": {
+    "name": "Okubabuka kw'omuwogo okw'obuwuka",
+    "shortDescription": "Obulwadde bwa bakitiriya obuyinza okwonoona ebikoola n'ebikolo. Butera okubuna mu biseera eby'enkuba n'okusimba ebitooke ebirwadde.",
+    "symptoms": ["Amabala ag'ekikooko ku kikoola, oluusi nga galiko ebbala erya kyenvu", "Ebikoola biyinza okuwotoka oba okukala", "Obubonero obuddugavu oba amazzi ag'amatankane biyinza okulabika ku bikolo"],
+    "whatToDoNow": ["Gyawo ebimera ebirwadde ennyo ng'ennimiro ekalidde, era obiteeke wala n'ennimiro.", "Tokozesa bikolo oba bikozesebwa okuva ku bimera birwadde ku bimera biramu.", "Kozesa ebitooke ebiramu okusimba omulundi oguddako."],
+    "prevention": ["Simbira ku bitooke ebiramu okuva eri omuntu omwesigwa.", "Naaza ebikozesebwa ng'ova mu nnimiro emu ogenda mu ndala.", "Lekawo ekifo ekimala wakati w'ebimera empewo esobole okuyitamu."],
+    "whenToCall": "Buuza omukozi w'ebyobulimi singa ebimera bingi biwotoka, ebikolo biriko obubonero obuddugavu, oba ekizibu kibuna mangu."
+  },
+  "cbsd": {
+    "name": "Ekirwadde ky'omuwogo eky'ebbala ery'ekikooko",
+    "shortDescription": "Ekirwadde kya vayirasi ekibuna okuyita mu bisowera ebyeru n'ebitooke ebirwadde. Kiyinza okuleeta obubonero ku bikoola n'amabala ag'ekikooko mu mirandira.",
+    "symptoms": ["Amabala aga kyenvu okumpi n'emisuwa gy'ebikoola", "Amabala ag'ekikooko oba ebifo ebikaze mu mirandira", "Ekimera ekiyiseeko kiyinza okuba ekimpi oba obuwanvu obutafaanana"],
+    "whatToDoNow": ["Tosimba bikolo okuva ku bimera ebiyinza okuba ebirwadde.", "Kebera emirandira gy'ebimera ebitonotono singa kisoboka bulungi.", "Funa amagezi nga tonnagyawo bimera bingi."],
+    "prevention": ["Simbira ku kika ky'omuwogo ekirungi era ekikkirizibwa mu kitundu kyo.", "Kebera ebitooke nga tonnasimba.", "Gyawo emimera gy'omuwogo egyamera gyokka era weetegereze ebisowera ebyeru."],
+    "whenToCall": "Tuukirira omukozi w'ebyobulimi ng'olabye amabala aga kyenvu ku bikoola oba amabala ag'ekikooko mu mirandira."
+  },
+  "cgm": {
+    "name": "Amabala ag'ekibisi ku muwogo",
+    "shortDescription": "Ekirwadde kya vayirasi ekiyinza okuleetera ebikoola by'omuwogo okuba n'amabala oba okukula mu ngeri etali ya bulijjo. Ebitooke ebirwadde biyinza okutwala obulwadde mu nnimiro empya.",
+    "symptoms": ["Amabala ag'ekibisi ekitangaala n'ekiddugavu agatali geenkana", "Ebikoola biyinza okufuuka ebifunda, ebikyamu oba ebitono", "Ekimera kiyinza okukula mpola"],
+    "whatToDoNow": ["Teeka akabonero ku bimera ebiriko obubonero obweyolefu era okebere ebiriraanye.", "Tojjamu bikolo ku bimera ebirabika ng'ebirwadde.", "Funa amagezi mu kitundu kyo nga tonnagyawo bimera."],
+    "prevention": ["Simbira ku bitooke ebiramu okuva eri omuntu omwesigwa.", "Nnimiramu ennimiro obutalekawo bimera bya muwogo ebyamera byokka.", "Kebera ebimera ebito buli kiseera olabe enkyukakyuka mu bikoola."],
+    "whenToCall": "Buuza omukozi w'ebyobulimi singa amabala galabika ku bimera bingi oba ebikoola ebipya bitandika okukula mu ngeri etali ya bulijjo."
+  },
+  "cmd": {
+    "name": "Ekirwadde kya mosaiki mu muwogo",
+    "shortDescription": "Ekirwadde kya vayirasi ekibuna okuyita mu bisowera ebyeru n'ebitooke ebirwadde. Kireeta amabala aga kyenvu ku bikoola era kiyinza okukendeeza ku makungula g'emirandira.",
+    "symptoms": ["Amabala aga kyenvu ekitangaala n'ekibisi ku bikoola", "Ebikoola biyinza kwezingako, okukyama oba okufuuka ebitono", "Ekimera kiyinza okuba ekimpi okusinga emimera emiramu egyakyo"],
+    "whatToDoNow": ["Tojjamu bikolo ku bimera ebiriko obubonero bwa mosaiki.", "Kebera ennimiro yonna, naddala ebimera ebito.", "Funa amagezi mu kitundu kyo nga tonnagyawo bimera mu nnimiro yonna."],
+    "prevention": ["Londa ebitooke ebiramu n'ebika ebisaanira ekitundu kyo.", "Gyawo emimera gy'omuwogo egyamera gyokka.", "Buuza omukozi w'ebyobulimi ku ngeri y'okufuga ebisowera n'obulwadde."],
+    "whenToCall": "Kuba omukozi w'ebyobulimi essimu singa obubonero bubunye oba ebimera tebyakula bulungi."
+  },
+  "healthy": {
+    "name": "Omuwogo ogulabika ng'omulamu",
+    "shortDescription": "Ekifaananyi kirabika ng'eky'ebikoola by'omuwogo ebiramu. Ekifaananyi tekisobola kulaga buli kawuka, kizibu kya mirandira oba obulwadde obutandise.",
+    "symptoms": ["Ebikoola ebisinga birina langi n'endabika y'emu", "Tewali bubonero bwa bulwadde obweyolefu mu kifaananyi kino"],
+    "whatToDoNow": ["Weeyongere okukebera ebikoola n'engeri ekimera gye kikulamu.", "Kozesa ebitooke ebiramu era ennimiro yo ogikuume bulungi."],
+    "prevention": ["Simbira ku bitooke ebiramu ebisaanira ekitundu kyo.", "Kebera ebimera buli kiseera, n'okuli wansi w'ebikoola.", "Wandiika obubonero obupya bwe bulabika."],
+    "whenToCall": "Buuza omukozi w'ebyobulimi singa ekimera kiwotoka, tekikula bulungi, oba kirabika ng'ekiriko amabala amapya."
+  }
+}
