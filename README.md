@@ -429,6 +429,8 @@ It is written to `android/app/build/outputs/apk/debug/app-debug.apk` and can be 
 
 To keep the installable browser version available, deploy `dist/` to an HTTPS static host using the instructions above. On Android, open the deployed site in Chrome and choose **Install app** or **Add to Home screen**. The PWA and native Android app are separate installations and update independently.
 
+On iPhone or iPad, open the deployed HTTPS address directly in Safari, tap **Share**, choose **Add to Home Screen**, then ensure **Open as Web App** is enabled before tapping **Add**. Do not choose **Add Bookmark**. If an older home-screen shortcut opens Safari with its browser controls, remove that shortcut and add it again after deploying the current build; iOS keeps the old launch behavior until the shortcut is recreated.
+
 ## Troubleshooting
 
 ### The model badge stays on “Preparing diagnosis model”

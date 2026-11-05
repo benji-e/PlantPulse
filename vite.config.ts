@@ -11,7 +11,7 @@ export default defineConfig({
     }),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'fonts/*.woff2'],
+      includeAssets: ['favicon.svg', 'apple-touch-icon.png', 'fonts/*.woff2'],
       manifest: {
         name: 'PlantPulse — Cassava leaf guide',
         short_name: 'PlantPulse',
@@ -28,7 +28,7 @@ export default defineConfig({
       },
       workbox: {
         navigateFallback: 'index.html',
-        globPatterns: ['**/*.{js,css,html,svg,woff2,json,wasm}'],
+        globPatterns: ['**/*.{js,css,html,png,svg,woff2,json,wasm}'],
         runtimeCaching: [
           {
             urlPattern: ({ url }) => url.pathname.startsWith('/model/'),
