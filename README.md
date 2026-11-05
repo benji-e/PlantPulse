@@ -30,6 +30,7 @@ PlantPulse is a **decision-support tool**, not a laboratory test, diagnosis, or 
 | Area | Current implementation |
 |---|---|
 | Front end | React 18, TypeScript, Vite |
+| Android | Capacitor wrapper around the same React app and bundled model |
 | Styling | Tailwind CSS plus the shared rules in [`src/styles.css`](./src/styles.css) |
 | Diagnosis | TensorFlow.js, using the bundled five-class cassava GraphModel |
 | Model input | 160 × 160 RGB pixels, with the deployed model's own rescaling layer |
@@ -37,7 +38,7 @@ PlantPulse is a **decision-support tool**, not a laboratory test, diagnosis, or 
 | Supported UI languages | English and Luganda |
 | Navigation | Top-right links on laptop/desktop; fixed bottom tabs on smaller screens |
 | Scan storage | IndexedDB via Dexie; data stays in the current browser profile |
-| Offline support | Vite PWA service worker, cached app assets, and locally cached model files |
+| Offline support | PWA service worker on the web; packaged app and model assets on Android |
 | Authentication | Not included. PlantPulse has no sign-in or login feature. |
 | Server/API | No PlantPulse application server or diagnosis API; inference runs locally in the browser |
 
@@ -110,6 +111,9 @@ Vite prints the preview URL when the preview server starts. Use `localhost` when
 | `npm run dev` | Start the Vite development server. |
 | `npm run build` | Run the TypeScript project build (`tsc -b`) and create the production PWA in `dist/`. |
 | `npm run preview` | Serve the already-built `dist/` output locally for a production preview. Run `npm run build` first. |
+| `npm run android:sync` | Build the web app and sync its production assets into the Android project. |
+| `npm run android:open` | Open the native project in Android Studio. |
+| `npm run android:run` | Build and run the app on a connected Android device or emulator. |
 
 The Vite development server is configured to listen on all interfaces. A phone on the same Wi-Fi may be able to open the computer's network address for page testing, but camera access on a plain LAN HTTP address may be blocked by the browser. Use an HTTPS deployment to test the camera on a phone.
 
@@ -309,7 +313,9 @@ When adding or changing a translation key, update both `en.json` and `lg.json`. 
 │   ├── App.tsx                  # Routes and app/model startup
 │   ├── main.tsx                 # React entry point and local font imports
 │   └── styles.css               # Tailwind layers and application styles
+├── android/                     # Capacitor Android Studio project
 ├── multi_crop_classifier/       # Separate experimental Python model workflow
+├── capacitor.config.ts          # Capacitor app identity and web build folder
 ├── index.html                   # PWA entry HTML and metadata
 ├── tailwind.config.js           # Theme colors and typography
 ├── vite.config.ts               # Vite, PWA, service worker, WASM asset copy
@@ -381,6 +387,47 @@ Set the build command to `npm run build` and the publish/output directory to `di
 ### GitHub Pages
 
 The current app assumes hosting at `/`. GitHub Pages project sites commonly use a repository subpath such as `/repository-name/`. Before using a subpath, configure Vite's `base`, React Router's `basename`, the model and labels URLs, WASM paths, PWA manifest start URL/icons, and service-worker navigation fallback to agree on that path. Then rebuild and verify every asset URL. For the simplest deployment, use a host or custom domain that serves PlantPulse from the root path.
+
+### Android app
+
+The Android app packages the same React interface and local TensorFlow.js model in a Capacitor WebView. Diagnosis and scan history remain on-device; the Android build does not require a PlantPulse server. The browser PWA remains available as a separate install option.
+
+Requirements:
+
+- Node.js and npm, as for web development.
+- Android Studio with its recommended Android SDK and Java/Gradle components.
+- For publishing on Google Play, a Google Play Console developer account.
+
+Build and open the Android project from the repository root:
+
+```powershell
+npm ci
+npm run android:sync
+npm run android:open
+```
+
+In Android Studio, select an emulator or connected Android phone and press **Run** to test. The first Gradle build may take several minutes while Android dependencies download. To run from the command line with a connected device or running emulator, use:
+
+```powershell
+npm run android:run
+```
+
+To create a release for distribution, use **Build > Generate Signed Bundle / APK** in Android Studio and choose **Android App Bundle** for Google Play or **APK** for direct installation. Create and securely back up a release signing key; never commit it to this repository. Upload the signed `.aab` through Google Play Console and complete its store listing and testing requirements.
+
+Whenever web code or model assets change, run `npm run android:sync` again before building the Android release. This rebuilds `dist/` and copies the current app into the Android project. Increment `versionCode` and update `versionName` in [`android/app/build.gradle`](./android/app/build.gradle) before each store release. The Android app does not use the web service worker; updates are delivered in a new signed Android release.
+
+The debug APK can be built from PowerShell with:
+
+```powershell
+Set-Location android
+.\gradlew.bat assembleDebug
+```
+
+It is written to `android/app/build/outputs/apk/debug/app-debug.apk` and can be installed on a test device. Do not distribute a debug APK as the production release.
+
+### Installable website (PWA)
+
+To keep the installable browser version available, deploy `dist/` to an HTTPS static host using the instructions above. On Android, open the deployed site in Chrome and choose **Install app** or **Add to Home screen**. The PWA and native Android app are separate installations and update independently.
 
 ## Troubleshooting
 

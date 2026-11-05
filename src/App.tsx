@@ -1,6 +1,8 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { registerSW } from 'virtual:pwa-register';
+import { App as CapacitorApp } from '@capacitor/app';
+import { Capacitor } from '@capacitor/core';
 import { AppShell } from './components/AppShell';
 import { useAppStore } from './store/appStore';
 import { useTranslation } from './hooks/useTranslation';
@@ -22,9 +24,29 @@ function ScreenLoader() {
 
 function Startup() {
   const setModel = useAppStore((state) => state.setModel);
+
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return;
+
+    let active = true;
+    let removeListener: (() => Promise<void>) | undefined;
+    void CapacitorApp.addListener('backButton', () => {
+      if (window.history.length > 1) window.history.back();
+      else void CapacitorApp.exitApp();
+    }).then((listener) => {
+      if (active) removeListener = () => listener.remove();
+      else void listener.remove();
+    });
+
+    return () => {
+      active = false;
+      void removeListener?.();
+    };
+  }, []);
+
   useEffect(() => {
     let active = true;
-    registerSW({ immediate: true });
+    if (!Capacitor.isNativePlatform()) registerSW({ immediate: true });
     async function startModel() {
       try {
         const { cacheModelAssets, warmClassifier } = await import('./services/classifier');
